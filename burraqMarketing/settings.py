@@ -122,6 +122,10 @@ USE_I18N = True
 
 USE_L10N = True
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+
 USE_TZ = True
 
 
