@@ -14,6 +14,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--// Meta tag Keywords -->
 <!-- css files -->
 {% block css %}
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <link  rel="stylesheet"  href="{% static 'css/style.css' %} "type="text/css" media="all">
     <link href="{% static 'css/bootstrap.min.css' %} " rel="stylesheet" type="text/css" media="all">
     <link href="{% static 'css/font-awesome.min.css' %} " rel="stylesheet" type="text/css" media="all">
@@ -30,43 +31,44 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </head>
 <body>
 <div class="header">
-	<div class="agile-top-header">
-		<div class="logo">
-			<a href="index.html"><h1><label>I</label>nternal</h1></a>
+	<div class="agile-top-header top-header-setting">
+		<div class="logo logo-setting">
+			<a href="{% url 'indexView' %} "><h1><label>I</label>nternal</h1></a>
 		</div>
+
 		<!-- navigation -->
 		<div class="top-left">
-			<div class="top-icons">
-				<ul>
-					<li><a href="#" class="fa fa-facebook"> </a></li>
-					<li><a href="#" class="fa fa-twitter"> </a></li>
-					<li><a href="#" class="fa fa-google"> </a></li>
-					<li><a href="#" class="fa fa-linkedin" ></a></li>
-					<li><a href="#" class="fa fa-pinterest-p" ></a></li>
-				</ul>
-			</div>
-			<div class="top-nav">
+{#			<div class="top-icons">#}
+{#				<ul>#}
+{#					<li><a href="#" class="fa fa-facebook"> </a></li>#}
+{#					<li><a href="#" class="fa fa-twitter"> </a></li>#}
+{#					<li><a href="#" class="fa fa-google"> </a></li>#}
+{#					<li><a href="#" class="fa fa-linkedin" ></a></li>#}
+{#					<li><a href="#" class="fa fa-pinterest-p" ></a></li>#}
+{#				</ul>#}
+{#			</div>#}
+			<div class="top-nav nav-setting">
 				<nav class="navbar navbar-default">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-								
-					</div>
+{#					<div class="navbar-header">#}
+{#						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">#}
+{#							<span class="sr-only">Toggle navigation</span>#}
+{#							<span class="icon-bar"></span>#}
+{#							<span class="icon-bar"></span>#}
+{#							<span class="icon-bar"></span>#}
+{#						</button>#}
+{#								#}
+{#					</div>#}
 					<!-- navbar-header -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						 <nav class="linkEffects linkHoverEffect_12">
 							<ul>
-								<li><a href="index.html" class="scroll"><span>Home</span></a></li> 
-								<li><a href="#about" class="scroll"><span>About</span></a></li> 
-								<li><a href="#services" class="scroll"><span>Services</span></a></li> 
-								<li><a href="#products" class="scroll"><span>Products</span></a></li> 
-								<li><a href="#team" class="scroll"><span>Our Team</span></a></li> 
-								<li><a href="#gallery" class="scroll"><span>Gallery</span></a></li> 
-								<li><a href="#contact" class="scroll"><span>Contact Us</span></a></li> 
+								<li><a href="index.html" class="scroll tabs-color"><span>Home</span></a></li>
+								<li><a href="#about" class="scroll tabs-color"><span>About</span></a></li>
+								<li><a href="#services" class="scroll tabs-color"><span>Services</span></a></li>
+								<li><a href="#products" class="scroll tabs-color"><span>Products</span></a></li>
+								<li><a href="#team" class="scroll tabs-color"><span>Our Team</span></a></li>
+								<li><a href="#gallery" class="scroll tabs-color"><span>Gallery</span></a></li>
+								<li><a href="#contact" class="scroll tabs-color"><span>Contact Us</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -256,58 +258,58 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </div>
 <!--//products-->
 
-<!-- team -->
-<div class="team-page" id="team">
-	<div class="container">
-		<h3 class="title"> Our Team</h3>
-		<div class="col-md-4 about-poleft t1">
-            <div class="about_img"><img src="{%  static 'images/t1.jpg' %}" alt="">
-              <h5>Victoria</h5>
-              <div class="about_opa">
-				<p>Manager</p>
-                <ul class="fb_icons2 text-center">
-					<li><a class="fa fa-facebook" href="#"></a></li>
-					<li><a class="fa fa-twitter" href="#"></a></li>
-					<li><a class="fa fa-google" href="#"></a></li>
-					<li><a class="fa fa-linkedin" href="#"></a></li>
-					<li><a class="fa fa-pinterest-p" href="#"></a></li>
-				</ul>
-              </div>
-            </div>
-        </div>
-		<div class="col-md-4 about-poleft t2">
-            <div class="about_img"><img src="{%  static 'images/t2.jpg' %}" alt="">
-              <h5>Darponia</h5>
-              <div class="about_opa">
-                <p>Designer</p>
-                <ul class="fb_icons2 text-center">
-					<li><a class="fa fa-facebook" href="#"></a></li>
-					<li><a class="fa fa-twitter" href="#"></a></li>
-					<li><a class="fa fa-google" href="#"></a></li>
-					<li><a class="fa fa-linkedin" href="#"></a></li>
-					<li><a class="fa fa-pinterest-p" href="#"></a></li>
-				</ul>
-              </div>
-            </div>
-        </div>
-		<div class="col-md-4 about-poleft t3">
-            <div class="about_img"><img src="{%  static 'images/t3.jpg' %}" alt="">
-              <h5>Patricka</h5>
-              <div class="about_opa">
-                <p>Assistant</p>
-                <ul class="fb_icons2 text-center">
-					<li><a class="fa fa-facebook" href="#"></a></li>
-					<li><a class="fa fa-twitter" href="#"></a></li>
-					<li><a class="fa fa-google" href="#"></a></li>
-					<li><a class="fa fa-linkedin" href="#"></a></li>
-					<li><a class="fa fa-pinterest-p" href="#"></a></li>
-				</ul>
-              </div>
-            </div>
-        </div>
-		<div class="clearfix"></div>
-	</div>
-</div>
+{#<!-- team -->#}
+{#<div class="team-page" id="team">#}
+{#	<div class="container">#}
+{#		<h3 class="title"> Our Team</h3>#}
+{#		<div class="col-md-4 about-poleft t1">#}
+{#            <div class="about_img"><img src="{%  static 'images/t1.jpg' %}" alt="">#}
+{#              <h5>Victoria</h5>#}
+{#              <div class="about_opa">#}
+{#				<p>Manager</p>#}
+{#                <ul class="fb_icons2 text-center">#}
+{#					<li><a class="fa fa-facebook" href="#"></a></li>#}
+{#					<li><a class="fa fa-twitter" href="#"></a></li>#}
+{#					<li><a class="fa fa-google" href="#"></a></li>#}
+{#					<li><a class="fa fa-linkedin" href="#"></a></li>#}
+{#					<li><a class="fa fa-pinterest-p" href="#"></a></li>#}
+{#				</ul>#}
+{#              </div>#}
+{#            </div>#}
+{#        </div>#}
+{#		<div class="col-md-4 about-poleft t2">#}
+{#            <div class="about_img"><img src="{%  static 'images/t2.jpg' %}" alt="">#}
+{#              <h5>Darponia</h5>#}
+{#              <div class="about_opa">#}
+{#                <p>Designer</p>#}
+{#                <ul class="fb_icons2 text-center">#}
+{#					<li><a class="fa fa-facebook" href="#"></a></li>#}
+{#					<li><a class="fa fa-twitter" href="#"></a></li>#}
+{#					<li><a class="fa fa-google" href="#"></a></li>#}
+{#					<li><a class="fa fa-linkedin" href="#"></a></li>#}
+{#					<li><a class="fa fa-pinterest-p" href="#"></a></li>#}
+{#				</ul>#}
+{#              </div>#}
+{#            </div>#}
+{#        </div>#}
+{#		<div class="col-md-4 about-poleft t3">#}
+{#            <div class="about_img"><img src="{%  static 'images/t3.jpg' %}" alt="">#}
+{#              <h5>Patricka</h5>#}
+{#              <div class="about_opa">#}
+{#                <p>Assistant</p>#}
+{#                <ul class="fb_icons2 text-center">#}
+{#					<li><a class="fa fa-facebook" href="#"></a></li>#}
+{#					<li><a class="fa fa-twitter" href="#"></a></li>#}
+{#					<li><a class="fa fa-google" href="#"></a></li>#}
+{#					<li><a class="fa fa-linkedin" href="#"></a></li>#}
+{#					<li><a class="fa fa-pinterest-p" href="#"></a></li>#}
+{#				</ul>#}
+{#              </div>#}
+{#            </div>#}
+{#        </div>#}
+{#		<div class="clearfix"></div>#}
+{#	</div>#}
+{#</div>#}
 <!-- //team -->
 
 <!-- gallery -->
@@ -506,15 +508,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<li><a href="#" class="link google-plus" target="_parent"><span class="fa fa-google-plus-square"></span></a></li>
 					</ul>
 				</div>
-					<form action="#" method="post" class="newsletter">
-						<input class="email" type="email" placeholder="Your email...">
-						<input type="submit" class="submit" value="">
-					</form>
-					<div class="clearfix"> </div>
+{#					<form action="#" method="post" class="newsletter">#}
+{#						<input class="email" type="email" placeholder="Your email...">#}
+{#						<input type="submit" class="submit" value="">#}
+{#					</form>#}
+{#					<div class="clearfix"> </div>#}
 				</div>
-			<div class="w3agile_footer_copy">
-				<p>© 2016 Internal. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts.</a></p>
-			</div>
+{#			<div class="w3agile_footer_copy">#}
+{#				<p>© 2016 Internal. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts.</a></p>#}
+{#			</div>#}
 		</div>
 	</div>
 <!-- //footer -->

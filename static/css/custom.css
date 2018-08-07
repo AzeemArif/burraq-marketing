@@ -1,0 +1,13 @@
+.logo-setting {
+    float: left;
+}
+.nav-setting {
+    float: right !important;
+}
+.top-header-setting {
+    background-color: #1F1E1E;
+    opacity: 0.9;
+}
+.tabs-color {
+    color: gold !important;
+}
