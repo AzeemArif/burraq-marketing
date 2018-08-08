@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from burraq.models import *
+
+admin.site.register(GalleryImages)
+admin.site.register(GalleryFolders)

@@ -30,6 +30,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //js -->
 </head>
 <body>
+{% block content %}
 <div class="header">
 	<div class="agile-top-header top-header-setting">
 		<div class="logo logo-setting">
@@ -317,136 +318,159 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="container">
 		 <h3>Gallery</h3>
 
-            <div align="center">
-                <button class="btn btn-default filter-button" data-filter="all">All Projects</button>
-                <button class="btn btn-default filter-button" data-filter="residential">Residential Projects</button>
-                <button class="btn btn-default filter-button" data-filter="commercial">Commercial Projects</button>
-                <button class="btn btn-default filter-button" data-filter="farms">Farm Houses</button>
-            </div>
+        <div align="center">
+            <button class="btn btn-default filter-button" data-filter="all">All Projects</button>
+
+            {% for foo in folders %}
+                {% if foo %}
+                    <button class="btn btn-default filter-button" data-filter="{{ foo.title|cut:" " }}">{{ foo.title }}</button>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+{#        {% for foo in gallery %}#}
+{#            {% if foo %}#}
+{##}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+
+
+{#            <div align="center">#}
+{#                <button class="btn btn-default filter-button" data-filter="all">All Projects</button>#}
+{#                <button class="btn btn-default filter-button" data-filter="residential">Residential Projects</button>#}
+{#                <button class="btn btn-default filter-button" data-filter="commercial">Commercial Projects</button>#}
+{#                <button class="btn btn-default filter-button" data-filter="farms">Farm Houses</button>#}
+{#            </div>#}
 
             <div class="gallery-grids">
+{##}
+            {% for foo in gallery %}
+                {% if foo %}
+                   <div class="col-md-4 gallery-grid wow fadeInUp animated filter {{ foo.folder.title|cut:" " }}" data-wow-delay=".5s">
+                    <div class="grid">
+                        <figure class="effect-apollo">
+                            <a class="example-image-link" href="{{ foo.image.url }}" data-lightbox="example-set" data-title="">
+                                <img src="{{ foo.image.url }}" alt="" />
+{#                                <img src="{%  static 'images/g2.jpg' %}" alt="" />#}
+                                <figcaption>
+                                    <h3>{{ foo.image_title }}</h3>
+                                    <p>{{ foo.image_description }}</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
 
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g1.jpg" data-lightbox="example-set" data-title="">
-                                <img src=" {%  static 'images/g1.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Kitchen</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="">
-                                <img src="{%  static 'images/g2.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Dining Room</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g3.jpg" data-lightbox="example-set" data-title="">
-                                <img src="{%  static 'images/g3.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Kitchen</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g9.jpg" data-lightbox="example-set" data-title="">
-                                <img src="{%  static 'images/g9.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Hall</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g4.jpg" data-lightbox="example-set" data-title="">
-                                <img src="{%  static 'images/g4.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Bed</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g5.jpg" data-lightbox="example-set" data-title="">
-                                <img src=" {%  static 'images/g5.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Hall</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g6.jpg" data-lightbox="example-set" data-title="">
-                                <img src=" {%  static 'images/g6.jpg ' %}" alt="" />
-                                <figcaption>
-                                    <h3>Dining Room</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g7.jpg" data-lightbox="example-set" data-title="">
-                                <img src="{%  static 'images/g7.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Office Room</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">
-                    <div class="grid">
-                        <figure class="effect-apollo">
-                            <a class="example-image-link" href="images/g8.jpg" data-lightbox="example-set" data-title="">
-                                <img src="{%  static 'images/g8.jpg' %}" alt="" />
-                                <figcaption>
-                                    <h3>Bed Room</h3>
-                                    <p>sed do eiusmod tempor.</p>
-                                </figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src="{%  static 'images/g2.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Dining Room</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g3.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src="{%  static 'images/g3.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Kitchen</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g9.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src="{%  static 'images/g9.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Hall</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g4.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src="{%  static 'images/g4.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Bed</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g5.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src=" {%  static 'images/g5.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Hall</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g6.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src=" {%  static 'images/g6.jpg ' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Dining Room</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g7.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src="{%  static 'images/g7.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Office Room</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">#}
+{#                    <div class="grid">#}
+{#                        <figure class="effect-apollo">#}
+{#                            <a class="example-image-link" href="images/g8.jpg" data-lightbox="example-set" data-title="">#}
+{#                                <img src="{%  static 'images/g8.jpg' %}" alt="" />#}
+{#                                <figcaption>#}
+{#                                    <h3>Bed Room</h3>#}
+{#                                    <p>sed do eiusmod tempor.</p>#}
+{#                                </figcaption>#}
+{#                            </a>#}
+{#                        </figure>#}
+{#                    </div>#}
+{#                </div>#}
                 <div class="clearfix"> </div>
 
-            </div>
+{#            </div>#}
 
                 </div>
             </div>
@@ -638,6 +662,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //smooth scrolling -->
 	<!--// bottom-top -->
 
-
+{% endblock %}
 </body>
 </html>
