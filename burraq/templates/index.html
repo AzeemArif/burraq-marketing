@@ -316,8 +316,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="gallery" id="gallery">
 	<div class="container">
 		 <h3>Gallery</h3>
-                    <div class="gallery-grids">
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+
+            <div align="center">
+                <button class="btn btn-default filter-button" data-filter="all">All Projects</button>
+                <button class="btn btn-default filter-button" data-filter="residential">Residential Projects</button>
+                <button class="btn btn-default filter-button" data-filter="commercial">Commercial Projects</button>
+                <button class="btn btn-default filter-button" data-filter="farms">Farm Houses</button>
+            </div>
+
+            <div class="gallery-grids">
+
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g1.jpg" data-lightbox="example-set" data-title="">
@@ -330,7 +339,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g2.jpg" data-lightbox="example-set" data-title="">
@@ -343,7 +353,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter residential" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g3.jpg" data-lightbox="example-set" data-title="">
@@ -356,7 +366,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g9.jpg" data-lightbox="example-set" data-title="">
@@ -369,7 +379,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g4.jpg" data-lightbox="example-set" data-title="">
@@ -382,7 +392,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter commercial" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g5.jpg" data-lightbox="example-set" data-title="">
@@ -395,7 +405,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g6.jpg" data-lightbox="example-set" data-title="">
@@ -408,7 +418,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g7.jpg" data-lightbox="example-set" data-title="">
@@ -421,7 +431,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         </figure>
                     </div>
                 </div>
-                <div class="col-md-4 gallery-grid wow fadeInUp animated" data-wow-delay=".5s">
+                <div class="col-md-4 gallery-grid wow fadeInUp animated filter farms" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="images/g8.jpg" data-lightbox="example-set" data-title="">
@@ -436,7 +446,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                 </div>
                 <div class="clearfix"> </div>
 
-
             </div>
 
                 </div>
@@ -448,13 +457,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="contact" id="contact">
 		<div class="container">
 			<h3>Contact Us</h3>
-			<form action="#" method="post" class="contact_form">
-				<input type="text" class="margin-right" name="Name" placeholder="Name" required="">
-				<input type="email" name="Email" placeholder="Email" required="">
-				<input type="text" class="margin-right" name="Phone Number" placeholder="Phone Number" required="">
-				<textarea name="Message" placeholder="Message" required=""></textarea>
-				<input type="submit" class="more_btn" value="Send Message">
-			</form>
+{#			<form action="#" method="post" class="contact_form">#}
+{#				<input type="text" class="margin-right" name="Name" placeholder="Name" required="">#}
+{#				<input type="email" name="Email" placeholder="Email" required="">#}
+{#				<input type="text" class="margin-right" name="Phone Number" placeholder="Phone Number" required="">#}
+{#				<textarea name="Message" placeholder="Message" required=""></textarea>#}
+{#				<input type="submit" class="more_btn" value="Send Message">#}
+{#			</form>#}
+            <form method="post" class="contact_form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-actions">
+                  <button type="submit" class="more_btn">Send Message</button>
+                </div>
+            </form>
 		</div>
 	</div>
 <!-- //newsletter -->
@@ -585,7 +601,39 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			*/								
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			});
+
+
 		</script>
+
+        <script>
+            $(document).ready(function(){
+
+            $(".filter-button").click(function(){
+                var value = $(this).attr('data-filter');
+
+                if(value == "all")
+                {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                }
+                else
+                {
+        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+
+                }
+            });
+
+            if ($(".filter-button").removeClass("active")) {
+        $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+
+        });
+        </script>
+
 		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- //smooth scrolling -->
 	<!--// bottom-top -->
