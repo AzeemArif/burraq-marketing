@@ -196,20 +196,20 @@ h1 {
 .header {
     position: relative;
 }
-/*.agile-top-header {*/
-    /*position: absolute;*/
-    /*z-index: 999;*/
-    /*top: 3%;*/
-    /*left: 10%;*/
-	/*width:80%;*/
-/*}*/
-/* custom changing*/
 .agile-top-header {
-    position: relative;
-	width:100%;
-    padding-left: 26px;
-    padding-right: 26px;
+    position: absolute;
+    z-index: 999;
+    top: 3%;
+    left: 10%;
+	width:80%;
 }
+/* custom changing*/
+/*.agile-top-header {*/
+    /*position: relative;*/
+	/*width:100%;*/
+    /*padding-left: 26px;*/
+    /*padding-right: 26px;*/
+/*}*/
 .top-nav {
     float: left;
     margin-top: 27px;
@@ -2247,3 +2247,6 @@ figure.effect-apollo:hover p {
 	}
 }
 /*-- //Responsive --*/
+.logo_img{
+    max-width: 8%;
+}
