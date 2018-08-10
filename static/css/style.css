@@ -439,6 +439,7 @@ p.counter {
     float: right;
     width: 50%;
     padding: 2em;
+    padding-top: 0em;
 }
 .about-info2 h4 {
     font-size: 1.7em;
@@ -490,6 +491,7 @@ p.counter {
     padding-bottom: 16px;
 	display:inline-block;
 	margin-top:1em;
+    font-family: 'Gudea', sans-serif;
 }
 /*--//about--*/
 
@@ -996,7 +998,11 @@ figure.effect-apollo:hover p {
     transform: translateX(0px) rotate(360deg);
 }
 .social .link.google-plus {
-	background-color: tomato;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    /*background-color: tomato;*/
 	color: white;
 }
 .social .link.twitter {
