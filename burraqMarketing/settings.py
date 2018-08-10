@@ -25,7 +25,7 @@ SECRET_KEY = '0xfs-2l!oj#2+98fm3f#o=tnda!ozs#m)gxo=7d^(j!lpi4pz*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -132,6 +132,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
