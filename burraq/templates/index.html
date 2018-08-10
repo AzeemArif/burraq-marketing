@@ -274,11 +274,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="contact" id="contact">
 		<div class="container">
 			<h3>Contact Us</h3>
-            <form method="post" class="contact_form">
+            <form method="post" class="contact_form" action="{% url 'indexView' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="form-actions">
-                  <button type="submit" class="more_btn">Send Message</button>
+                    <input type="submit" class="more_btn" value="Send Message">
+{#                  <button type="submit" class="more_btn">Send Message</button>#}
                 </div>
             </form>
 		</div>
