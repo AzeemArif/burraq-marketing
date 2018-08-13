@@ -17,10 +17,14 @@ from django.contrib import admin
 from django.urls import include, path
 from django.contrib.staticfiles.urls import static
 from django.conf import settings
+from django.conf.urls import url, include
+
+from burraq import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('burraq.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.indexView.as_view(), name='indexView'),
+    url(r"^burraq/", include('burraq.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
