@@ -11,3 +11,13 @@
 .tabs-color {
     color: gold !important;
 }
+
+/* Testing css*/
+.modal-img{
+	margin-top: -46px;
+    width: 33%;
+    border: 5px solid goldenrod;
+    border-radius: 50%;
+    padding: 5px;
+    background: black;
+}

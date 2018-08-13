@@ -1,10 +1,8 @@
 from django.conf.urls import url
-from django.urls import path
 from django.conf.urls.static import static
-
+from burraq.views import successView
 from burraqMarketing import settings
-from . import views
 
 urlpatterns = [
-    url(r'success/$', views.successView, name='success'),
+    url(r'success/$', successView.as_view(), name='success'),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
