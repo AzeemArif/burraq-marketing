@@ -10,6 +10,8 @@ from burraq.models import *
 def index(request):
     return HttpResponse("Hello, world. Burraq Marketing.")
 
+# from django.views.decorators.csrf import csrf_exempt
+
 
 class indexView(TemplateView):
 
@@ -33,7 +35,8 @@ class indexView(TemplateView):
                 send_mail(subject, message, 'azeem.esketchers@gmail.com', ['mazeemarif0@gmail.com'], fail_silently=False)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('success')
+            return render(request, self.template_name)
+            # return redirect('success')
 
 
 # def successView(request):
