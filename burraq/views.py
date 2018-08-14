@@ -10,8 +10,6 @@ from burraq.models import *
 def index(request):
     return HttpResponse("Hello, world. Burraq Marketing.")
 
-# from django.views.decorators.csrf import csrf_exempt
-
 
 class indexView(TemplateView):
 

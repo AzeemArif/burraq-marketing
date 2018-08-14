@@ -2256,3 +2256,17 @@ figure.effect-apollo:hover p {
 .logo_img{
     max-width: 8%;
 }
+@media (max-width:768px){
+    .logo_img{
+        max-width: 12%;
+    }
+}
+@media (max-width:768px){
+    .custom-buttons{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+.map_location{
+
+}

@@ -5,6 +5,7 @@
 <head>
 <title>Burraq Marketing</title>
 <!-- Meta tag Keywords -->
+<link rel="shortcut icon" type="image/png" href="{%  static 'images/logo.png' %}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Burraq Marketing, marketing, Real estate, Real Estate Lahore, Alhayat residencia" />
@@ -36,7 +37,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div class="header">
 	<div class="agile-top-header">
 		<div class="logo">
-			<a href="index.html">
+			<a href="/">
                 <img src="{%  static 'images/logo.png' %}" class="logo_img" alt="">
             </a>
 		</div>
@@ -72,6 +73,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<li><a href="#services" class="scroll tabs-color"><span>Services</span></a></li>
 								<li><a href="#gallery" class="scroll tabs-color"><span>Gallery</span></a></li>
 								<li><a href="#contact" class="scroll tabs-color"><span>Contact Us</span></a></li>
+                                <li><a href="#reach" class="scroll tabs-color"><span>Reach Us</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -88,25 +90,26 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<li>	
 				<img src="{%  static 'images/bg1.jpg' %}" alt="">
 					<div class="slider-info">
-						<h4>Lorem ipsum <span>amet dolor</span></h4>
-						<p>Quis nostrud exercitation ulla</p>
-						<h6><span>Lorem ipsum</span> amet dolor</h6>
+{#						<h4>A New way of <span> Strategic & Actions Plans</span></h4>#}
+                        <h4>A New way of <span> Strategic Plans</span></h4>
+						<p>Matchless Marketing Strategies</p>
+						<h6><span>Plan </span> Build and Develop</h6>
 					</div>
 			</li>
 			<li>
 				<img src="{%  static 'images/bg2.jpg' %}" alt="">
 					<div class="slider-info">
-						<h4>adiping elitrs <span>eius tempo</span></h4>
-						<p>ut labore et dolore magna aliq</p>
-						<h6><span>incidit ut</span> do eiusmod</h6>
+						<h4>Where dreams<span> come home</span></h4>
+						<p>dreams into reality</p>
+						<h6><span>value</span> driven</h6>
 					</div>
 			</li>
 			<li>
 				<img src="{%  static 'images/bg3.jpg' %}" alt="">
 					<div class="slider-info">
-						<h4>incidit ut labo <span>dol magna</span></h4>
-						<p>sed do eiusmod tempor incid</p>
-						<h6><span>adiping elit</span> et dolore</h6>
+						<h4>The perfect <span>lifestyle</span></h4>
+						<p>essential for healthy lifestyle</p>
+						<h6><span>easy</span> living</h6>
 					</div>
 			</li>
 	    </ul>
@@ -288,6 +291,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             <form method="post" id="contactform" class="contact_form" action="{% url 'indexView' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
+
+                <div class="alert alert-success" id="alert_success_id">
+                    <strong>Thank you!</strong> Your response has been recorded.
+                </div>
                 <div class="form-actions">
                     <input type="submit" class="more_btn" value="Send Message" data-toggle="modal" aria-labelledby="thanksModal">
                 </div>
@@ -299,26 +306,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="{%  static 'images/logo.png' %}" class="modal-img">
-                <h3 class="pt-5 mb-0 text-secondary">Thanks for your love and support!</h3>
-                <p class="pb-3 text-muted"><small>Hope that you enjoy it well! Check also our site</small></p>
-                <a role="button" class="btn btn-secondary text-white mb-3" href="http://127.0.0.1:8000/home" target="_blank">http://127.0.0.1:8000/home</a>
+{#                <img src="{%  static 'images/logo.png' %}" class="modal-img">#}
+                <h3 class="pt-5 mb-0 text-secondary">Your response has been recorded. Thanks</h3>
             </div>
         </div>
     </div>
     </div>
 <!-- //newsletter -->
 <!-- footer -->
-	<div class="footer">
+	<div class="footer" id="reach">
 		<div class="container">
-			<div class="col-md-6 agileinfo_footer_grid">
+			<div class="col-md-4 agileinfo_footer_grid">
 				<h4>About Us</h4>
 				<p>Burraq Marketing is the new age agency that has paved way for numerous builders and developers to expedite their functions within the real estate spectrum in Pakistan.
                     Our innovative marketing strategies has leverged private companies to safeguard their investment in the most lucrative direction. Our expertise brought great
                     values in the past for our investors and clients, which further more enhanced our professionalism in the market. Our project like <b>Al-Hayat Center</b> and <b>Al-Hayat Residencia</b>
                     , symbolizes our great achievement in current market</p>
 			</div>
-			<div class="col-md-6 agileinfo_footer_grid">
+            <div class="col-md-4 agileinfo_footer_grid">
+				<h4>Our location</h4>
+                <div class="map_location">
+				    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.4439680276723!2d74.29274895038799!3d31.45697118129926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391901b60aa1fb05%3A0x992e97af0677d57!2sSK+ASSOCIATES!5e0!3m2!1sen!2s!4v1534254482795" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+                <div class="clearfix"> </div>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid">
 				<h4>Address</h4>
 				<ul>
 					<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>234-C PIA Main Boulevard, Johar Town, Lahore</li>
@@ -332,9 +344,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				   <h4>CONNECT WITH US</h4>
 				   <div class="social">
 					<ul>
-						<li><a href="https://web.facebook.com/burraqmarketing1/" class="link facebook" target="_parent"><span class="fa fa-facebook-square"></span></a></li>
-						<li><a href="https://twitter.com/buraqmarketing" class="link twitter" target="_parent"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="https://www.instagram.com/burraqmarketing/" class="link google-plus" target="_parent"><span class="fa fa-instagram"></span></a></li>
+						<li><a href="https://web.facebook.com/burraqmarketing1/" class="link facebook" target="_blank"><span class="fa fa-facebook-square"></span></a></li>
+						<li><a href="https://twitter.com/buraqmarketing" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="https://www.instagram.com/burraqmarketing/" class="link google-plus" target="_blank"><span class="fa fa-instagram"></span></a></li>
 					</ul>
 				</div>
 				</div>
@@ -346,6 +358,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- js files -->
 	<!-- Starts-Number-Scroller-Animation-JavaScript -->
 	<script type="text/javascript">
+
+        $('#alert_success_id').hide();
         $(document).on('submit', '#contactform', function(e){
            e.preventDefault();
 
@@ -359,8 +373,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                    'csrfmiddlewaretoken': '{{ csrf_token }}'
                },
                success:function () {
+                   $('#alert_success_id').show();
                    $("#contactform")[0].reset();
-                    $('#thanksModal').modal('show');
+                    {#$('#thanksModal').modal('show');#}
 
                }
            });
