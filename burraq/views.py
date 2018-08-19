@@ -30,7 +30,7 @@ class indexView(TemplateView):
             message = form.cleaned_data['message']
             message = message +"\n" + "From :" +from_email
             try:
-                send_mail(subject, message, 'azeem.esketchers@gmail.com', ['mazeemarif0@gmail.com'], fail_silently=False)
+                send_mail(subject, message, 'directorsohaib.burraqmarketing@gmail.com', ['drsohaib1600@gmail.com'], fail_silently=False)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return render(request, self.template_name)
