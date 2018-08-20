@@ -45,3 +45,6 @@ class successView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         return render_to_response(self.template_name)
+
+class ZohoView(TemplateView):
+    template_name = 'verifyforzoho.html'
