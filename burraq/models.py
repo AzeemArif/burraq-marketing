@@ -1,6 +1,6 @@
 from django.db import models
 from imagekit.models import ImageSpecField
-from imagekit.processors import ResizeToFill
+from imagekit.processors import ResizeToFill, ResizeToFit
 
 
 class GalleryFolders(models.Model):
@@ -18,7 +18,7 @@ class GalleryImages(models.Model):
     image_decsription = models.CharField(max_length=500)
     image = models.ImageField(upload_to='images')
     image_thumbnail = ImageSpecField(source='image',
-                                     processors=[ResizeToFill(90,60)],
+                                     processors=[ResizeToFit(300,300)],
                                      format='JPEG',
                                      options={'quality':50})
     created_at = models.DateTimeField(auto_now_add=True)
