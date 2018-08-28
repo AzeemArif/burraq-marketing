@@ -20,7 +20,7 @@ class GalleryImages(models.Model):
     image_thumbnail = ImageSpecField(source='image',
                                      processors=[ResizeToFill(90,60)],
                                      format='JPEG',
-                                     options={'quality':70})
+                                     options={'quality':50})
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
