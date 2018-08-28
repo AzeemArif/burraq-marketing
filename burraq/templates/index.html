@@ -127,54 +127,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div id="about" class="about">
 	<div class="container">
 			<h3>About us</h3>
-			<!--count-down -->
-{#		<div class="count">#}
-{#			<div class="col-md-3 agile_count_grid">#}
-{#				<div class="agile_count_grid_left">#}
-{#					<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>#}
-{#				</div>#}
-{#				<h5>Luxury Designs</h5>#}
-{#				<div class="agile_count_grid_right">#}
-{#					<p class="counter">160</p>#}
-{#				</div>#}
-{#				<div class="clearfix"> </div>#}
-{#				#}
-{#			</div>#}
-{#			<div class="col-md-3 agile_count_grid">#}
-{#				<div class="agile_count_grid_left">#}
-{#					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>#}
-{#				</div>#}
-{#				<h5>Happy Clients</h5>#}
-{#				<div class="agile_count_grid_right">#}
-{#					<p class="counter">35</p>#}
-{#				</div>#}
-{#				<div class="clearfix"> </div>#}
-{#				#}
-{#			</div>#}
-{#			<div class="col-md-3 agile_count_grid c3">#}
-{#				<div class="agile_count_grid_left">#}
-{#					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>#}
-{#				</div>#}
-{#				<h5>Followers</h5>#}
-{#				<div class="agile_count_grid_right">#}
-{#					<p class="counter">570</p>#}
-{#				</div>#}
-{#				<div class="clearfix"> </div>#}
-{#				#}
-{#			</div>#}
-{#			<div class="col-md-3 agile_count_grid c4">#}
-{#				<div class="agile_count_grid_left">#}
-{#					<span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>#}
-{#				</div>#}
-{#				<h5>Our Sponsors</h5>#}
-{#				<div class="agile_count_grid_right">#}
-{#					<p class="counter">10</p>#}
-{#				</div>#}
-{#				<div class="clearfix"> </div>#}
-{#				#}
-{#			</div>#}
-{#			<div class="clearfix"> </div>#}
-{#		</div>#}
 		<div class="about-info">
 			<img src="{%  static 'images/ab.jpg' %}" alt="about-image">
 			<div class="about-info2">
@@ -264,8 +216,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                     <div class="grid">
                         <figure class="effect-apollo">
                             <a class="example-image-link" href="{{ foo.image.url }}" data-lightbox="example-set" data-title="">
-                                <img src="{{ foo.image.url }}" alt="" />
-{#                                <img src="{%  static 'images/g2.jpg' %}" alt="" />#}
+                                <img src="{{ foo.image_thumbnail.url }}" alt="" />
+                                <img src="{%  static 'images/g2.jpg' %}" alt="" />
                                 <figcaption>
                                     <h3>{{ foo.image_title }}</h3>
                                     <p>{{ foo.image_description }}</p>
