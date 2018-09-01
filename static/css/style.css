@@ -2270,3 +2270,31 @@ figure.effect-apollo:hover p {
 .map_location{
 
 }
+.featured_image_main{
+    text-align: center;
+}
+.featured_image{
+    float: right;
+    width: 65%;
+}
+.featured_map{}
+.location-alhayat-section{
+    /*width: 50%;*/
+    /*padding: 2em;*/
+    /*padding-top: 0em;*/
+    margin-top: 3em;
+}
+.location-alhayat-section h4 {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-family: 'Gudea', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+.about-info-custom{
+    overflow: hidden;
+}
+#featured{
+    background: url("/static/images/featured_back.jpg");
+}
