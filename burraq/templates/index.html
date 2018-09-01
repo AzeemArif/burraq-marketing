@@ -213,7 +213,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                    <div class="col-md-4 gallery-grid wow fadeInUp animated filter {{ foo.folder.title|cut:" " }}" data-wow-delay=".5s">
                     <div class="grid">
                         <figure class="effect-apollo">
-                            <a class="example-image-link" href="{{ foo.image.url }}" data-lightbox="example-set" data-title="">
+                            <a class="example-image-link" href="{{ foo.image.url }}" data-lightbox="{{ foo.folder.title }}" data-title="">
                                 <img src="{{ foo.image_thumbnail.url }}" alt="" />
                                 <figcaption>
                                     <h3>{{ foo.image_title }}</h3>

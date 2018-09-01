@@ -18,7 +18,7 @@ class GalleryImages(models.Model):
     image_decsription = models.CharField(max_length=500)
     image = models.ImageField(upload_to='images')
     image_thumbnail = ImageSpecField(source='image',
-                                     processors=[ResizeToFit(300,300)],
+                                     processors=[ResizeToFit(300, 200)],
                                      format='JPEG',
                                      options={'quality':50})
     created_at = models.DateTimeField(auto_now_add=True)
