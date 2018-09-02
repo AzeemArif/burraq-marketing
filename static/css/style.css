@@ -2267,9 +2267,6 @@ figure.effect-apollo:hover p {
         font-size: 12px;
     }
 }
-.map_location{
-
-}
 .featured_image_main{
     text-align: center;
 }
@@ -2297,4 +2294,31 @@ figure.effect-apollo:hover p {
 }
 #featured{
     background: url("/static/images/featured_back.jpg");
+}
+.alhayat-video-main{
+    float: left;
+}
+.alhayat-video-main iframe{
+    width: 570px;
+}
+.featured_location iframe{
+    width: 570px;
+    float: left;
+}
+@media (max-width: 480px){
+    .alhayat-video-main iframe{
+        width: 330px;
+    }
+    .featured_location iframe{
+        width: 330px;
+    }
+}
+.map_location{}
+.map_location iframe{
+    width: 300px;
+}
+@media (min-width: 668px) and (max-width: 991px){
+    .map_location iframe{
+        width: 220px;
+    }
 }
